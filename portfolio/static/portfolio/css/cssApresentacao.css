@@ -1,0 +1,98 @@
+.container {
+  background-color: rgba(253, 193, 52, 0.8);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 40px 100px;
+}
+
+.container .A1S1{
+  background-color: rgba(44, 51, 56, 0.2);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.container .A1S1 div {
+  float: left;
+  width: 300px;   height: 200px;
+  padding: 25px;  margin: 10px;
+  background-color: white;
+  border-radius: 10px;                 /* arredonda os cantos */
+  box-shadow: 5px 5px 15px grey;
+}
+
+.container .A1S1 div a{
+  text-decoration: none;
+  color: black;
+}
+
+.container .A1S2{
+  margin-top: 10px ;
+  border-radius: 10px;
+  background-color: rgba(44, 51, 56, 0.2);
+}
+
+.container .A1S2 div {
+  float: left;
+  width: 300px;   height: 200px;
+  padding: 25px;  margin: 10px;
+  background-color: white;
+  border-radius: 10px;                 /* arredonda os cantos */
+  box-shadow: 5px 5px 15px grey;
+}
+
+.container .A1S2 div a{
+  text-decoration: none;
+  color: black;
+}
+
+.subtitulo{
+  position: relative;
+  top: 10px;
+  left: 150px;
+  height: 0px;
+}
+
+.titulo{
+  padding: 20px 100px
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

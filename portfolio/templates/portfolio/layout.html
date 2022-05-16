@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio de Rafael Sousa</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/cssHome.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/cssApresentacao.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'portfolio/images/logo2.ico' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+        <header>
+            {% load static %}
+            <a href="{% url 'portfolio:home' %}"><img src="{% static 'portfolio/images/logo2.png' %}"></a>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'portfolio:home' %}">home</a></li>
+                    <li><a href="{% url 'portfolio:apresentacao' %}">Sobre mim</a></li>
+                    <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
+                    <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
+                    <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
+                    <li><a href="{% url 'portfolio:site' %}">Site</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {% block main %}
+            {% endblock main %}
+        </main>
+        <footer>
+            <div>Informação</div>
+            <ul>
+                <li>  937460720 <i class="fa-solid fa-phone"> </i></li>
+                <li>Rafael Sousa - 2022</li>
+                <li><a href="{% url 'portfolio:site' %}">Mapa do Site</a></li>
+                <li>ULHT</li>
+            </ul>
+            <div class="f_social">
+                 <a href="https://www.linkedin.com/in/rafael-sousa-114207187/"><i class="fab fa-linkedin"></i></a>
+                 <a href="https://github.com/"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+</body>
+</html>
