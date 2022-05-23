@@ -2,115 +2,99 @@
 
 {% block main %}
 	<h1 class="titulo">Licenciatura de Informatica de Gestão</h1>
-    <h2 class="subtitulo">
-        Cadeiras
-    </h2>
 
-    <div class="container">
-        <div class="A1S1">
-                <div>
-                    <h2>Contabilidade</h2>
-                    <p>
-                        6 ECTS, <br>
-                        2021/2022,<br>
-                        <a href="#" target="_blank" title="Visa transmitir conhecimentos técnicos contabilísticos e capacidade para interpretar Mapas de
-                            Demonstrações Financeiras, necessárias numa gestão moderna e participativa que integra todos os
-                            gestores funcionais, entre os quais, o gestor informático, como ferramenta de trabalho, face aos desafios
-                            de um mercado competitivo e global.">Topicos abordados
-                        </a> <br>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <br>
-                        <a href="https://www.linkedin.com/in/lee-doo-hieng-9338b768/">Professor: Lee Doo Hieng</a><br>
-                        <a href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao/contabilidade/ULHT12-1796">Página da cadeira </a><br>
-
-                    </p>
-                </div>
-
-                <div>
-                    <h2>Fundamentos de Programação</h2>
-                    <p>
-                        6 ECTS, <br>
-                        2021/2022,<br>
-                        <a href="#" target="_blank" title="O objectivo desta unidade curricular é fornecer aos futuros profissionais na área da informática as
-                         bases para que possam iniciar (de um modo disciplinado) a actividade de programação.">Topicos abordados
-                        </a> <br>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><br>
-                        <a href="https://www.linkedin.com/in/palves/">Professor: Pedro Alves</a><br>
-                        <a href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao/fundamentos-de-programacao/ULHT12-7337">Página da cadeira </a><br>
+    <div class="contentor">
+        <div class="cadeiras">
+            <div class="ano1">
+                <h2 class="ano">1ºANO</h2>
+                {% for cadeira in cadeiras %}
+                    {% if cadeira.ano == 1 %}
+                        <div class="cadeira">
+                            <h2>{{ cadeira.nome }}</h2>
+                            <p class="topicos"><p1 style="font-size: 18px;">Tópicos da cadeira: </p1> <br>{{ cadeira.topicos }}</p> <br>
+                            <p>ECTS : {{ cadeira.ects }} &nbsp;&nbsp; Realizado em: {{ cadeira.realizacao }}</p>
+                            <p> <a href="{{ cadeira.pagCadeira }}" >Pagina da Cadeira</a> &nbsp;&nbsp;&nbsp; Pofessor : {{ cadeira.pofessor }}</p>
+                            <p>
+                        {% if cadeira.classicicacao == 0 %}
+                            <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 1 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 2 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 3 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 4 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% else %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        {% endif %}
 
                     </p>
-                </div>
-
-                <div>
-                    <h2>Fundamentos de Sistemas de Informação</h2>
-                    <p>
-                        7 ECTS, <br>
-                        2021/2022,<br>
-                        <a href="#" target="_blank" title="Visa transmitir conhecimentos técnicos contabilísticos e capacidade para interpretar Mapas de
-                            Demonstrações Financeiras, necessárias numa gestão moderna e participativa que integra todos os
-                            gestores funcionais, entre os quais, o gestor informático, como ferramenta de trabalho, face aos desafios
-                            de um mercado competitivo e global.">Topicos abordados
-                        </a> <br>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <br>
-                        <a href="https://www.linkedin.com/in/ac%C3%A1cio-carmona-3956544/">Professor: Acácio Carmona</a><br>
-                        <a href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao/fundamentos-de-sistemas-de-informacao/ULHT12-8334">Página da cadeira </a><br>
-
-                    </p>
-                </div>
-
-                <div>
-                    <h2>Matemática I</h2>
-                    <p>
-                        6 ECTS, <br>
-                        2021/2022,<br>
-                        <a href="#" target="_blank" title="Visa transmitir conhecimentos técnicos contabilísticos e capacidade para interpretar Mapas de
-                            Demonstrações Financeiras, necessárias numa gestão moderna e participativa que integra todos os
-                            gestores funcionais, entre os quais, o gestor informático, como ferramenta de trabalho, face aos desafios
-                            de um mercado competitivo e global.">Topicos abordados
-                        </a> <br>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <br>
-                        <a href="https://moodle.ensinolusofona.pt/user/profile.php?id=7590">Professor: Lee Doo Hieng</a><br>
-                        <a href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao/contabilidade/ULHT12-1796">Página da cadeira </a><br>
-
-                    </p>
-                </div>
-
-                <div>
-                    <h2>Teoria e Prática de Marketing</h2>
-                    <p>
-                        6 ECTS, <br>
-                        2021/2022,<br>
-                        <a href="#" target="_blank" title="Visa transmitir conhecimentos técnicos contabilísticos e capacidade para interpretar Mapas de
-                            Demonstrações Financeiras, necessárias numa gestão moderna e participativa que integra todos os
-                            gestores funcionais, entre os quais, o gestor informático, como ferramenta de trabalho, face aos desafios
-                            de um mercado competitivo e global.">Topicos abordados
-                        </a> <br>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <br>
-                        <a href="https://www.linkedin.com/in/palves/">Professor: Pedro Alves</a><br>
-                        <a href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao/contabilidade/ULHT12-1796">Página da cadeira </a><br>
-
-                    </p>
-                </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
+            <div class="ano2">
+                <h2 class="ano">2ºANO</h2>
+                {% for cadeira in cadeiras %}
+                    {% if cadeira.ano == 2 %}
+                        <div class="cadeira">
+                            <h4 >{{ cadeira.nome }}</h4>
+                            <p class="topicos"><p1 style="font-size: 18px;">Tópicos da cadeira: </p1> <br>{{ cadeira.topicos }}</p>
+                            <p class="#">ECTS : {{ cadeira.ects }} &nbsp;&nbsp; Realizado em: {{ cadeira.realizacao }}</p>
+                            <p class="#"> <a href="{{ cadeira.pagCadeira }}" class="#">Pagina da Cadeira</a> &nbsp;&nbsp;&nbsp; Pofessor : {{ cadeira.pofessor }}</p>
+                            <p>
+                        {% if cadeira.classicicacao == 0 %}
+                            <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 1 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 2 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 3 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 4 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% else %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        {% endif %}
 
-        <div class="A1S2">
-            <div>
-                <h2>Algoritmia e Estruturas de Dados</h2>
-                <p>
-                    6 ECTS, <br>
-                    2021/2022,<br>
-                    <p class="tooltip"> Topicos abordados <span class="tooltiptext"> Visa transmitir conhecimentos técnicos contabilísticos e capacidade para interpretar Mapas de
-                        Demonstrações Financeiras, necessárias numa gestão moderna e participativa que integra todos os
-                        gestores funcionais, entre os quais, o gestor informático, como ferramenta de trabalho, face aos desafios
-                        de um mercado competitivo e global. </span> </p> <br>
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><br>
-                    <a href="https://moodle.ensinolusofona.pt/user/profile.php?id=7590">Professor: Lee Doo Hieng</a><br>
-                    <a href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao/contabilidade/ULHT12-1796">Página da cadeira </a><br>
+                    </p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="ano3">
+                <h2 class="ano">3ºANO</h2>
+                {% for cadeira in cadeiras %}
+                    {% if cadeira.ano == 3 %}
+                        <div class="cadeira">
+                            <h4 >{{ cadeira.nome }}</h4>
+                            <p class="topicos"><p1 style="font-size: 18px;">Tópicos da cadeira: </p1> <br>{{ cadeira.topicos }}</p>
+                            <p class="#">ECTS : {{ cadeira.ects }} &nbsp;&nbsp; Realizado em: {{ cadeira.realizacao }}</p>
+                            <p class="#"> <a href="{{ cadeira.pagCadeira }}" class="#">Pagina da Cadeira</a> &nbsp;&nbsp;&nbsp; Pofessor : {{ cadeira.pofessor }}</p>
+                            <p>
+                        {% if cadeira.classicicacao == 0 %}
+                            <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 1 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 2 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 3 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% elif cadeira.classicicacao == 4 %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        {% else %}
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        {% endif %}
 
-                </p>
+                    </p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
-
     </div>
+
 
     <h1 class="titulo">Educação</h1>
 

@@ -1,58 +1,70 @@
-.container {
+.contentor {
   background-color: rgba(253, 193, 52, 0.8);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 40px 100px;
+  padding: 45px 100px;
 }
 
-.container .A1S1{
-  background-color: rgba(44, 51, 56, 0.2);
+.contentor .cadeiras {
+  background-color: rgba(44, 51, 56, 0.0);
   border-radius: 10px;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  height:max-content;
 }
 
-.container .A1S1 div {
+.contentor .cadeira {
   float: left;
-  width: 300px;   height: 200px;
-  padding: 25px;  margin: 10px;
+  width: 99%;   height: 50%;
+  padding: 10px 25px 25px;
+  margin: 7px;
   background-color: white;
-  border-radius: 10px;                 /* arredonda os cantos */
+  border-radius: 10px;                 /* arredondar cantos */
   box-shadow: 5px 5px 15px grey;
+  transition: color 1s;
 }
 
-.container .A1S1 div a{
+.contentor .cadeira a{
   text-decoration: none;
   color: black;
 }
 
-.container .A1S2{
-  margin-top: 10px ;
-  border-radius: 10px;
-  background-color: rgba(44, 51, 56, 0.2);
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.container .A1S2 div {
-  float: left;
-  width: 300px;   height: 200px;
-  padding: 25px;  margin: 10px;
-  background-color: white;
-  border-radius: 10px;                 /* arredonda os cantos */
-  box-shadow: 5px 5px 15px grey;
+
+
+.ano {
+  padding: 10px 10px 0;
+
 }
 
-.container .A1S2 div a{
-  text-decoration: none;
-  color: black;
+.ano1{
+    border-radius: 10px;
+    background-color: rgba(44, 51, 56, 0.4);
+    margin: 10px;
+    height:max-content;
+    width: 100%;
+}
+.ano2{
+    border-radius: 10px;
+    background-color: rgba(44, 51, 56, 0.4);
+    margin: 10px;
+    height:max-content;
+    width: 100%;
+}
+.ano3{
+    border-radius: 10px;
+    background-color: rgba(44, 51, 56, 0.4);
+    margin: 10px;
+    height:max-content;
+    width: 100%;
+
 }
 
-.subtitulo{
-  position: relative;
-  top: 10px;
-  left: 150px;
-  height: 0px;
-}
 
 .titulo{
   padding: 20px 100px
