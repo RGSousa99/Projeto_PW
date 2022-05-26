@@ -1,0 +1,56 @@
+.b_titulo{
+    padding: 20px 100px;
+    width: fit-content;
+}
+
+.posts{
+    background-color: rgba(253, 193, 52, 0.8);
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+}
+
+.post{
+    width: 600px;
+    height:auto;
+    border-radius: 10px;                 /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+    padding: 20px;
+    background-color: white;
+    margin: 25px;
+}
+
+.newPost{
+
+}
+
+.new_P_titulo{
+    height: 50px;
+    padding-top: 15px;
+    display: grid;
+    justify-items: center;
+    justify-content: center ;
+}
+.p_autor{
+
+}
+.card-text{
+    padding-right: 0;
+}
+
+form{
+    background-color: rgba(253, 193, 52, 0.8);
+    padding: 30px;
+}
+
+form p #id_autor{
+
+}
+form div {
+    padding-top: 10px;
+}
+
+form p:first-child {
+    padding-top: 20px;
+}

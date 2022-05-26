@@ -1,0 +1,24 @@
+
+
+.contentor .projetos {
+  background-color: rgba(44, 51, 56, 0.4);
+  border-radius: 10px;
+  height:max-content;
+  width: 100%;
+  padding: 15px;
+}
+
+.contentor .projeto {
+
+  float: left;  height: 50%;
+  margin: 10px;
+  padding: 10px 25px 25px;
+  background-color: white;
+  border-radius: 10px;                 /* arredondar cantos */
+  box-shadow: 5px 5px 15px grey;
+}
+
+.contentor .projeto a{
+  text-decoration: none;
+  color: black;
+}

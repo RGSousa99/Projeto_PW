@@ -1,0 +1,110 @@
+.contentor {
+  background-color: rgba(253, 193, 52, 0.8);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 45px 100px;
+}
+
+.contentor .cadeiras {
+  background-color: rgba(44, 51, 56, 0.0);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  height:max-content;
+}
+
+.contentor .cadeira {
+  float: left;
+  width: 99%;   height: 50%;
+  padding: 10px 25px 25px;
+  margin: 7px;
+  background-color: white;
+  border-radius: 10px;                 /* arredondar cantos */
+  box-shadow: 5px 5px 15px grey;
+  transition: color 1s;
+}
+
+.contentor .cadeira a{
+  text-decoration: none;
+  color: black;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+.ano {
+  padding: 10px 10px 0;
+
+}
+
+.ano1{
+    border-radius: 10px;
+    background-color: rgba(44, 51, 56, 0.4);
+    margin: 10px;
+    height:max-content;
+    width: 100%;
+}
+.ano2{
+    border-radius: 10px;
+    background-color: rgba(44, 51, 56, 0.4);
+    margin: 10px;
+    height:max-content;
+    width: 100%;
+}
+.ano3{
+    border-radius: 10px;
+    background-color: rgba(44, 51, 56, 0.4);
+    margin: 10px;
+    height:max-content;
+    width: 100%;
+
+}
+
+
+.titulo{
+  padding: 20px 100px
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
