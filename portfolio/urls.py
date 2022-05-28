@@ -10,5 +10,5 @@ urlpatterns = [
     path('pw', views.pw_page_view, name='pw'),
     path('blog', views.blog_page_view, name='blog'),
     path('novo', views.novo_post_page_view, name='novo'),
-    path('site', views.site_page_view, name='site'),
+    path('quizz', views.quizz_page_view, name='quizz'),
 ]

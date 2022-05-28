@@ -7,22 +7,25 @@
 }
 
 .contentor .cadeiras {
-  background-color: rgba(44, 51, 56, 0.0);
-  border-radius: 10px;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  height:max-content;
+    background-color: rgba(99, 168, 218, 0.0);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height:max-content;
 }
 
 .contentor .cadeira {
-  float: left;
-  width: 99%;   height: 50%;
-  padding: 10px 25px 25px;
-  margin: 7px;
-  background-color: white;
-  border-radius: 10px;                 /* arredondar cantos */
-  box-shadow: 5px 5px 15px grey;
-  transition: color 1s;
+
+    float: left;
+    width: 100%;   height: 50%;
+    padding: 25px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;                 /* arredondar cantos */
+    box-shadow: 5px 5px 15px grey;
+    transition: color 1s;
+    outline: #b4b4b4 solid;
+
 }
 
 .contentor .cadeira a{
@@ -45,24 +48,30 @@ p {
 .ano1{
     border-radius: 10px;
     background-color: rgba(44, 51, 56, 0.4);
-    margin: 10px;
+    margin-bottom: 20px;
     height:max-content;
     width: 100%;
+    padding: 10px;
+    outline: black solid;
 }
 .ano2{
     border-radius: 10px;
     background-color: rgba(44, 51, 56, 0.4);
-    margin: 10px;
+    margin-bottom: 20px;
     height:max-content;
     width: 100%;
+    padding: 10px;
+    outline: black solid;
+
 }
 .ano3{
     border-radius: 10px;
     background-color: rgba(44, 51, 56, 0.4);
-    margin: 10px;
+    margin-bottom: 10px;
     height:max-content;
     width: 100%;
-
+    outline: black solid;
+    padding: 10px;
 }
 
 

@@ -1,27 +1,32 @@
 {% extends 'portfolio/layout.html' %}
 
+
 {% block main %}
+    {% load static %}
 	<h1 class="titulo">Os meus projetos</h1>
 
     <div class="contentor">
         <div class="projetos">
             {% for projeto in projetos %}
-
                 <div class="projeto">
                     <h3>{{ projeto.titulo }}</h3>
-                    <p>descricao      {{ projeto.descricao }}      </p>
-                    <p>imagem         <img src="{{ projeto.imagem }}">      </p>
-                    <p>realizacao     {{ projeto.realizacao }}     </p>
-                    <p>cadeira        {{ projeto.cadeira }}      </p>
-                    <p>participantes  {{ projeto.participantes }}      </p>
-                    <p>github         {{ projeto.github }}      </p>
-                    <p>youtube        {{ projeto.youtube }}      </p>
-                    <p>tecnologias    {{ projeto.tecnologias }}      </p>
-                    <p>competencias   {{ projeto.competencias }}      </p>
+                    <p>descricao   -   {{ projeto.descricao }}      </p>
+                    <p>imagem      -  <img src="{{ projeto.imagem }}">      </p>
+                    <p>realizacao  -   {{ projeto.realizacao }}     </p>
+                    <p><a href="{{ projeto.cadeira }}" >Paguina da cadeira</a></p>
+                    <p>
+                        participantes - {{ projeto.participantes.nome }}
+                        <a href="{{ projeto.participantes.linkedin}}" ><i class="fab fa-linkedin" style="font-size:20px"></i></a>
+                        <a href="{{ projeto.participantes.pagAPP}}" ><img class="heroku" src="{% static 'portfolio/images/heroku.png' %}"  alt=""></a>
+                    </p>
+                    <p><a href="{{ projeto.github }}" ><i class="fab fa-github" style="font-size:20px"></i></a>  </p>
+
+                    <p><a href="{{ projeto.youtube }}" ><i class="fab fa-youtube" style="font-size:20px"></i></a>  </p>
+                    <p>tecnologias -   {{ projeto.tecnologias }}      </p>
+                    <p>competencias-   {{ projeto.competencias }}      </p>
                 </div>
             {% endfor %}
         </div>
     </div>
 
-937386538
 {% endblock %}

@@ -5,3 +5,6 @@ from.models import *
 admin.site.register(Post)
 admin.site.register(Cadeira)
 admin.site.register(Projeto)
+admin.site.register(Professor)
+admin.site.register(Colega)
+admin.site.register(PontuacaoQuizz)

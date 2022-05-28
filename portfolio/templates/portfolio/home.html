@@ -1,5 +1,6 @@
 {% extends 'portfolio/layout.html' %}
 
+
 {% block main %}
 <div class="hero">
     <div class="detel">
@@ -8,10 +9,10 @@
             cor par ser texto e ter alguma cor.</p>
         <a href="#">Downdload CV</a>
     </div>
-
+    {% load static %}
     <div class="images">
-        <img src="/../static/portfolio/images/shape.png" class="shape">
-        <img src="/../static/portfolio/images/tartaruga.png" class="foto">
+        <img src="{% static 'portfolio/images/shape.png' %}" class="shape">
+        <img src="{% static 'portfolio/images/tartaruga.png' %}" class="foto">
     </div>
 
     <div class="social">
