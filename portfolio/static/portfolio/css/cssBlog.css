@@ -20,7 +20,7 @@
 
 
 .post{
-    width: 600px;
+    width: 50%;
     height:auto;
     border-radius: 10px;                 /* arredonda os cantos */
     box-shadow: 5px 5px 15px grey;
