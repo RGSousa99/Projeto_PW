@@ -11,6 +11,13 @@
     justify-items: center;
 }
 
+@media (max-width : 1250px) {
+    .posts{
+        grid-template-columns: auto;
+    }
+}
+
+
 .post{
     width: 600px;
     height:auto;

@@ -196,3 +196,46 @@ footer ul li a{
 footer a:hover{
     color: orange;
 }
+
+@media (max-width : 760px) {
+    header{
+        height: 20vh;
+    }
+    footer ul {
+        column-count: 1;
+        margin-left: 30px;
+    }
+    footer{
+        height: 32vh;
+    }
+    .f_social{
+        position: relative;
+        top: -100px;
+        left: 65%;
+        width: fit-content;
+    }
+    .images{
+        width: 45%;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+    }
+
+    .images img{
+        height: 70%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: bottom 1s, left 1s;
+    }
+
+    .images:hover .shape{
+        bottom: 40px;
+    }
+
+    .images:hover .foto{
+        left: 45%;
+    }
+}
