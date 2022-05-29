@@ -1,0 +1,15 @@
+
+.labs{
+    float: left;
+    width: 1600px;
+    height: 850px;
+    padding: 25px;
+    border-radius: 10px;                 /* arredondar cantos */
+    background-image: url(../images/labs.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.labs a{
+    left: 1000px;
+}
