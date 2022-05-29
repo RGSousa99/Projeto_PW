@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/portfolio/static/'
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('app/static'))]  # novo
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]  # novo
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 # Default primary key field type
