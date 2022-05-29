@@ -25,8 +25,7 @@
 </head>
 <body>
         <header>
-            {% load static %}
-            <a href="{% url 'portfolio:home' %}"><img src="{% static 'portfolio/images/logo2.png' %}"></a>
+            <a href="{% url 'portfolio:home' %}"><img src="{% static 'portfolio/images/logo2.png' %}" alt=""></a>
             <nav>
                 <ul>
                     <li><a href="{% url 'portfolio:home' %}">home</a></li>
@@ -34,7 +33,7 @@
                     <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
                     <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
                     <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
-                    <li><a href="{% url 'portfolio:quizz' %}">Quizz</a></li>
+                    <li><a href="{% url 'portfolio:quizzz' %}">Quizz</a></li>
                 </ul>
             </nav>
         </header>
