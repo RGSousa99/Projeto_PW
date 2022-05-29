@@ -18,9 +18,9 @@
     <div class="contentor">
         {% for noticia in noticias %}
              <div class="post">
-                 <h4 class="p_titulo">{{ noticia.titulo }}</h4>
-                 <p class="p_texto">{{ noticia.texto }}</p>
-                 <p class="card-text">{{ noticia.link }}</p>
+                <a href="{{ noticia.link }}"  style="text-decoration: none; color: black"><h4 class="p_titulo" ><b>{{ noticia.titulo }}</b></h4></a>
+                <p class="p_texto">{{ noticia.texto }}</p>
+                <img src="{% static 'portfolio/images/noticia1.jpeg' %}">
              </div>
         {% endfor %}
     </div>
