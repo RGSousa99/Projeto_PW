@@ -16,7 +16,13 @@
 
     <h1 class="titulo_pw">Notícias</h1>
     <div class="contentor">
-        
+        {% for noticia in noticias %}
+             <div class="post">
+                 <h4 class="p_titulo">{{ noticia.titulo }}</h4>
+                 <p class="p_texto">{{ noticia.texto }}</p>
+                 <p class="card-text">{{ noticia.link }}</p>
+             </div>
+        {% endfor %}
     </div>
 
 {% endblock %}

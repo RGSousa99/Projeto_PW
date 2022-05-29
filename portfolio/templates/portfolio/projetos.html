@@ -9,19 +9,18 @@
         <div class="projetos">
             {% for projeto in projetos %}
                 <div class="projeto">
-                    <h3>{{ projeto.titulo }}</h3>
-                    <p>descricao   -   {{ projeto.descricao }}      </p>
+                    <h3 class="titulo_pw">{{ projeto.titulo }}</h3>
+                    <p>Descricao   -   {{ projeto.descricao }}      </p>
                     <p>imagem      -  <img src="{{ projeto.imagem }}">      </p>
-                    <p>realizacao  -   {{ projeto.realizacao }}     </p>
+                    <p>Realizacao  -   {{ projeto.realizacao }}     </p>
                     <p><a href="{{ projeto.cadeira }}" >Paguina da cadeira</a></p>
                     <p>
                         participantes - {{ projeto.participantes.nome }}
                         <a href="{{ projeto.participantes.linkedin}}" ><i class="fab fa-linkedin" style="font-size:20px"></i></a>
                         <a href="{{ projeto.participantes.pagAPP}}" ><img class="heroku" src="{% static 'portfolio/images/heroku.png' %}"  alt=""></a>
                     </p>
-                    <p><a href="{{ projeto.github }}" ><i class="fab fa-github" style="font-size:20px"></i></a>  </p>
-
-                    <p><a href="{{ projeto.youtube }}" ><i class="fab fa-youtube" style="font-size:20px"></i></a>  </p>
+                    <p><a href="{{ projeto.github }}" ><i class="fab fa-github" style="font-size:40px"></i></a>
+                        <a href="{{ projeto.youtube }}" ><i class="fab fa-youtube" style="font-size:40px"></i></a>  </p>
                     <p>tecnologias -   {{ projeto.tecnologias }}      </p>
                     <p>competencias-   {{ projeto.competencias }}      </p>
                 </div>

@@ -60,3 +60,12 @@ class PontuacaoQuizz(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Noticia(models.Model):
+    titulo = models.CharField(max_length=50)
+    texto = models.CharField(max_length=500)
+    imagem = models.ImageField()
+    link = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.titulo

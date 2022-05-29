@@ -22,7 +22,8 @@ def projetos_page_view(request):
 
 
 def pw_page_view(request):
-    return render(request, 'portfolio/pw.html')
+    context = {'noticias': Noticia.objects.all()}
+    return render(request, 'portfolio/pw.html', context)
 
 
 def blog_page_view(request):
