@@ -5,14 +5,7 @@
     <a class="btn btn-primary" href="{% url 'portfolio:novo' %}" role="button">Novo post</a>
 
    <div class="posts">
-        {% for post in posts %}
-             <div class="post">
-                 <h4 class="p_titulo">{{ post.titulo }}</h4>
-                 <h5 class="p_autor">Comentario de {{ post.autor }}</h5>
-                 <p class="p_texto">{{ post.descricao }}</p>
-                 <p class="card-text">{{ post.data }}</p>
-             </div>
-        {% endfor %}
+
     </div>
 
 
