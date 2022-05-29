@@ -48,7 +48,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='cadeira',
-            name='pofessor',
+            name='professor',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='portfolio.professor'),
         ),
         migrations.AlterField(
