@@ -1,8 +1,11 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-    <h1 class="b_titulo">Blog</h1>
-    <a class="btn btn-primary" href="{% url 'portfolio:novo' %}" role="button">Novo post</a>
+    <div class="b_titulo">
+        <h1>Blog</h1>
+        <a class="btn btn-primary" href="{% url 'portfolio:novo' %}" role="button" >Novo post</a>
+    </div>
+
 
    <div class="posts">
         {% for post in posts %}
