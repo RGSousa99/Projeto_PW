@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="978a6845-b0a5-4374-ae3c-83f0c38f3f06" name="Changes" comment="primeiro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssPW.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssPW.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/images/resultadoGrafico.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/resultadoGrafico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/images/noticia1.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/apresentacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/apresentacao.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/pw.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/pw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadrez.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pw-labs-rafaelsousa-a22002402" beforeDir="false" afterPath="$PROJECT_DIR$/../pw-labs-rafaelsousa-a22002402" afterDir="false" />
     </list>
     <list id="ad2eee9c-5e0d-4cf4-b34a-9e5c01b92302" name="Changes pipfile" comment=" pipfile" />
@@ -94,7 +95,7 @@
       <workItem from="1653515935923" duration="2462000" />
       <workItem from="1653754563221" duration="4719000" />
       <workItem from="1653771099478" duration="6055000" />
-      <workItem from="1653821548338" duration="29183000" />
+      <workItem from="1653821548338" duration="31048000" />
     </task>
     <task id="LOCAL-00001" summary="primeiro">
       <created>1653340539476</created>
