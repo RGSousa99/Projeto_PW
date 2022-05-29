@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
 ]
-django_heroku.settings(locals(), staticfiles=False)  # teste
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
