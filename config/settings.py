@@ -130,6 +130,6 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': "tCSStFCNMR6SxRI5_vewBavHBM4",
 }
 
-MEDIA_URL = '/portfolio/'
+MEDIA_URL = 'portfolio/MEDIA'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
