@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',  # novo
     'django.contrib.staticfiles',
-    'portfolio',
+    'cloudinary_storage',
+    'cloudinary',
+    'portfolio'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +123,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "dsmspsgxm",
+    'API_KEY': "213176593647753",
+    'API_SECRET': "tCSStFCNMR6SxRI5_vewBavHBM4",
+}
+
+MEDIA_URL = '/portfolio/'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

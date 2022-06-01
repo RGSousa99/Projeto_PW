@@ -42,7 +42,7 @@ class Cadeira(models.Model):
 class Projeto(models.Model):
     titulo = models.CharField(max_length=30)
     descricao = models.CharField(max_length=500)
-    imagem = models.ImageField()
+    imagem = models.ImageField(upload_to=resolution_path)
     realizacao = models.DateField()
     cadeira = models.ForeignKey(Cadeira, on_delete=models.CASCADE)
     participantes = models.ForeignKey(Colega, on_delete=models.CASCADE)
@@ -64,7 +64,7 @@ class PontuacaoQuizz(models.Model):
 class Noticia(models.Model):
     titulo = models.CharField(max_length=50)
     texto = models.CharField(max_length=500)
-    imagem = models.ImageField()
+    imagem = models.ImageField(upload_to=resolution_path)
     link = models.CharField(max_length=200)
 
     def __str__(self):
