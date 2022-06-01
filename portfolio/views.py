@@ -79,9 +79,4 @@ def desenha_grafico_resultados(request):
         plt.savefig('portfolio/static/portfolio/images/resultadoGrafico.png', bbox_inches='tight')
 
 
-# views.py
-
-def resolution_path(instance, filename):
-    return f'users/{instance.id}/'
-
 
