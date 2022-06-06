@@ -2,6 +2,9 @@ from django.db import models
 
 
 # Create your models here.
+import portfolio
+
+
 class Post(models.Model):
     autor = models.CharField(max_length=20)
     data = models.DateField(auto_now_add=True)
@@ -39,10 +42,13 @@ class Cadeira(models.Model):
     def __str__(self):
         return self.nome
 
+def resolution_path(instance, filename):
+    return f'MIDIA/{instance.id}/'
+
 class Projeto(models.Model):
     titulo = models.CharField(max_length=30)
     descricao = models.CharField(max_length=500)
-    imagem = models.ImageField()
+    imagem = models.ImageField(upload_to=resolution_path)
     realizacao = models.DateField()
     cadeira = models.ForeignKey(Cadeira, on_delete=models.CASCADE)
     participantes = models.ForeignKey(Colega, on_delete=models.CASCADE)
@@ -64,7 +70,7 @@ class PontuacaoQuizz(models.Model):
 class Noticia(models.Model):
     titulo = models.CharField(max_length=50)
     texto = models.CharField(max_length=500)
-    imagem = models.ImageField()
+    imagem = models.ImageField(upload_to=resolution_path)
     link = models.CharField(max_length=200)
 
     def __str__(self):
