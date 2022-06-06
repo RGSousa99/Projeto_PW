@@ -34,6 +34,13 @@
                     <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
                     <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
                     <li><a href="{% url 'portfolio:quizz' %}">Quizz</a></li>
+                    <li>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'portfolio:logout' %}" class="btnlogout">Logout</a>
+                        {% else %}
+                            <a href="{% url 'portfolio:login' %}">Login</a>
+                        {% endif %}
+                    </li>
                 </ul>
             </nav>
         </header>

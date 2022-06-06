@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="978a6845-b0a5-4374-ae3c-83f0c38f3f06" name="Changes" comment="primeiro">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssHome.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssHome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/apresentacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/apresentacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pw-labs-rafaelsousa-a22002402" beforeDir="false" afterPath="$PROJECT_DIR$/../pw-labs-rafaelsousa-a22002402" afterDir="false" />
     </list>
     <list id="ad2eee9c-5e0d-4cf4-b34a-9e5c01b92302" name="Changes pipfile" comment=" pipfile" />
@@ -22,6 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -40,6 +50,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -51,6 +62,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RGSou\OneDrive - Ensino Lusófona\FACULDADE\4º Semestre\PW\config\portfolio\templates\portfolio" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="config" type="Python.DjangoServer" factoryName="Django server">
       <module name="config" />
@@ -93,6 +109,10 @@
       <workItem from="1653754563221" duration="4719000" />
       <workItem from="1653771099478" duration="6055000" />
       <workItem from="1653821548338" duration="31433000" />
+      <workItem from="1654170501650" duration="8496000" />
+      <workItem from="1654252569947" duration="1902000" />
+      <workItem from="1654342493724" duration="7232000" />
+      <workItem from="1654504161728" duration="2105000" />
     </task>
     <task id="LOCAL-00001" summary="primeiro">
       <created>1653340539476</created>

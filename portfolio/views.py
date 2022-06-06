@@ -1,3 +1,5 @@
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
@@ -77,3 +79,93 @@ def desenha_grafico_resultados(request):
         pontuacoes.reverse()
         plt.barh(nomes, pontuacoes)
         plt.savefig('portfolio/static/portfolio/images/resultadoGrafico.png', bbox_inches='tight')
+
+
+def login_view(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return render(request, "portfolio/home.html")
+        else:
+            return render(request, "portfolio/login.html", {
+                'message': "Cardenciais invalidas."
+            })
+    return render(request, "portfolio/login.html")
+
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'portfolio/login.html', {
+        "message": "Logged out."
+    })
+
+
+
+@login_required
+def novo_projetos_page_view(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('portfolio:login'))
+
+    form = ProjetoForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+    context = {'form': form}
+    return render(request, 'portfolio/novoProjeto.html', context)
+
+@login_required
+def view_editar_projeto(request, projeto_id):
+    projeto = Projeto.objects.get(id=projeto_id)
+    form = ProjetoForm(request.POST or None, instance=projeto)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+    context = {'form': form, 'projeto_id': projeto_id}
+    return render(request, 'portfolio/editaProjeto.html', context)
+
+@login_required
+def view_apagar_projeto(request, projeto_id):
+    projeto = Projeto.objects.get(id=projeto_id)
+    projeto.delete()
+    return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+
+
+@login_required
+def nova_cadeira_page_view(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('portfolio:login'))
+
+    form_c = CadeiraForm(request.POST or None)
+
+    if form_c.is_valid():
+        form_c.save()
+        return HttpResponseRedirect(reverse('portfolio:apresentacao'))
+
+    context = {'form': form_c}
+    return render(request, 'portfolio/novaCadeira.html', context)
+
+@login_required
+def view_editar_cadeira(request, cadeira_id):
+    cadeira = Cadeira.objects.get(id=cadeira_id)
+    form = CadeiraForm(request.POST or None, instance=cadeira)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:apresentacao'))
+
+    context = {'form': form, 'cadeira_id': cadeira_id}
+    return render(request, 'portfolio/editaCadeira.html', context)
+
+@login_required
+def view_apagar_cadeira(request, cadeira_id):
+    cadeira = Cadeira.objects.get(id=cadeira_id)
+    cadeira.delete()
+    return HttpResponseRedirect(reverse('portfolio:apresentacao'))
