@@ -152,7 +152,7 @@ main{
 
 footer {
     flex-shrink: 0;
-    height:22vh;
+    height:150px;
     background-color: rgba(44, 51, 56, 0.9);
 }
 footer div{
@@ -207,7 +207,7 @@ footer a:hover{
         margin-left: 30px;
     }
     footer{
-        height: 32vh;
+        height: 220px;
     }
     .f_social{
         position: relative;

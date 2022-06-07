@@ -4,7 +4,7 @@
     <h1>Editar Projeto</h1>
 
 
-    <form action="{% url 'portfolio:editarProjeto' projeto_id %}" method="post">
+    <form action="{% url 'portfolio:editarProjeto' projeto_id %}" method="post" enctype="multipart/form-data">
 
         {% csrf_token %}
         <table>

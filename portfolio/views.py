@@ -1,3 +1,4 @@
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
@@ -7,7 +8,7 @@ from matplotlib import pyplot as plt
 from .forms import *
 from .models import *
 import datetime
-
+import cloudinary.uploader
 
 def home_page_view(request):
     return render(request, 'portfolio/home.html')
@@ -70,15 +71,21 @@ def pontuacao_quizz(request):
     return score
 
 def desenha_grafico_resultados(request):
+    cloudinary.config(
+        cloud_name="rgsousa99",
+        api_key="764835177596756",
+        api_secret="WRolP8_AJDKEUr7iAr02ybnP3iQ"
+    )
     nomes = []
     pontuacoes = []
     for score in PontuacaoQuizz.objects.all():
         nomes.append(score.nome)
         pontuacoes.append(score.pontuacao)
-        nomes.reverse()
-        pontuacoes.reverse()
-        plt.barh(nomes, pontuacoes)
-        plt.savefig('portfolio/static/portfolio/images/resultadoGrafico.png', bbox_inches='tight')
+    nomes.reverse()
+    pontuacoes.reverse()
+    plt.barh(nomes, pontuacoes)
+    plt.savefig('resultados.png', bbox_inches='tight')
+    cloudinary.uploader.upload("resultados.png", public_id="portfolio/resultados")
 
 
 def login_view(request):
@@ -169,3 +176,7 @@ def view_apagar_cadeira(request, cadeira_id):
     cadeira = Cadeira.objects.get(id=cadeira_id)
     cadeira.delete()
     return HttpResponseRedirect(reverse('portfolio:apresentacao'))
+
+
+
+

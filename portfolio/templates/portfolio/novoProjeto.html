@@ -3,7 +3,7 @@
 {% block main %}
     <h3 class="new_P_titulo">Novo Projeto</h3>
 
-    <form method="POST" action="">
+    <form method="POST" enctype="multipart/form-data" action="">
         {% csrf_token %}
         {{ form.as_p}}
         <div>

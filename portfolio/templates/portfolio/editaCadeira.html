@@ -4,17 +4,15 @@
     <h1>Editar Cadeira</h1>
 
 
-    <form action="{% url 'portfolio:editarCadeira' cadeira_id %}" method="post">
-
+    <form action="{% url 'portfolio:editarCadeira' cadeira_id %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
-
-    <input type="submit" value="Criar">
-            <a href="{% url 'portfolio:apresentacao' %}">Cancelar</a>
-
-            <a href="{% url 'portfolio:apagarCadeira' cadeira_id %}">Apagar</a>
-</form>
+        <br>
+        <input type="submit" value="Guardar" role="button" class="btn btn-success">
+        <a href="{% url 'portfolio:apresentacao' %}" role="button" class="btn btn-primary">Cancelar</a>
+        <a href="{% url 'portfolio:apagarCadeira' cadeira_id %}" role="button" class="btn btn-danger" >Apagar</a>
+    </form>
 
 {% endblock %}

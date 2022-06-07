@@ -4,7 +4,6 @@ from django.db import models
 # Create your models here.
 import portfolio
 
-
 class Post(models.Model):
     autor = models.CharField(max_length=20)
     data = models.DateField(auto_now_add=True)
@@ -43,7 +42,7 @@ class Cadeira(models.Model):
         return self.nome
 
 def resolution_path(instance, filename):
-    return f'MIDIA/{instance.id}/'
+    return f'MEDIA/{filename}/'
 
 class Projeto(models.Model):
     titulo = models.CharField(max_length=30)

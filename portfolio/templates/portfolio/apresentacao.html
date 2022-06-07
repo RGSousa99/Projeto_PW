@@ -1,10 +1,14 @@
 {% extends 'portfolio/layout.html' %}
+{% load static %}
 
 {% block main %}
-	<h1 class="titulo">Licenciatura de Informatica de Gestão</h1>
-    {% if request.user.is_authenticated %}
-        <a class="btn btn-primary" href="{% url 'portfolio:novaCadeira' %}" role="button" >Nova cadeira</a>
-    {% endif %}
+    <div class="nova">
+        <h1 class="titulo">Licenciatura de Informatica de Gestão</h1>
+        {% if request.user.is_authenticated %}
+            <a class="btn btn-primary" href="{% url 'portfolio:novaCadeira' %}" role="button" >Nova cadeira</a>
+        {% endif %}
+    </div>
+
     <div class="contentor">
         <div class="cadeiras">
             <div class="ano1">
@@ -112,9 +116,8 @@
 
     <h1 class="titulo">Educação</h1>
     <div class="contentor">
-
         <div class="timeline">
-		<ul>
+		    <ul>
 			<li>
 				<span class="data">3rd January 2020</span>
 				<div class="content">
@@ -152,16 +155,29 @@
 				</div>
 			</li>
 		</ul>
-	</div>
-
+	    </div>
     </div>
+
     <h1 class="titulo">Aptidões e competências pessoais</h1>
     <div class="contentor">
 
     </div>
     <h1 class="titulo">Interesses e hobbies</h1>
     <div class="contentor">
-
+        <div class="hobbies">
+            <div class="hobbie">
+                <img src="{% static 'portfolio/images/natacao.png' %}" alt="natacao">
+                <p>Natação</p>
+            </div>
+            <div class="hobbie">
+                <img src="{% static 'portfolio/images/fones-de-ouvido.png' %}" alt="natacao">
+                <p>Ouvir musica</p>
+            </div>
+            <div class="hobbie">
+                <img src="{% static 'portfolio/images/helmet.png' %}" alt="natacao">
+                <p>Descobrir/inventar</p>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
