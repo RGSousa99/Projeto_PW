@@ -111,14 +111,12 @@ def logout_view(request):
         "message": "Logged out."
     })
 
-
-
 @login_required
 def novo_projetos_page_view(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse('portfolio:login'))
 
-    form = ProjetoForm(request.POST or None)
+    form = ProjetoForm(request.POST or None, request.FILES)
 
     if form.is_valid():
         form.save()

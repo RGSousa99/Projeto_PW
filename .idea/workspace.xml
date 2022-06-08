@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="978a6845-b0a5-4374-ae3c-83f0c38f3f06" name="Changes" comment="primeiro">
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/resultadosDoQuizz.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/quizz.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/quizz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
     </list>
     <list id="ad2eee9c-5e0d-4cf4-b34a-9e5c01b92302" name="Changes pipfile" comment=" pipfile" />
@@ -109,7 +108,7 @@
       <workItem from="1654252569947" duration="1902000" />
       <workItem from="1654342493724" duration="7232000" />
       <workItem from="1654504161728" duration="2105000" />
-      <workItem from="1654714472728" duration="3692000" />
+      <workItem from="1654714472728" duration="4494000" />
     </task>
     <task id="LOCAL-00001" summary="primeiro">
       <created>1653340539476</created>
