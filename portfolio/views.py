@@ -178,5 +178,6 @@ def view_apagar_cadeira(request, cadeira_id):
     return HttpResponseRedirect(reverse('portfolio:apresentacao'))
 
 
-
+def resolution_path(instance, filename):
+    return f'MEDIA/{filename}/'
 
