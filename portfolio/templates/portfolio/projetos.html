@@ -13,7 +13,7 @@
                 <div class="projeto">
                     <h3 class="titulo_pw">{{ projeto.titulo }}</h3>
                     <p>Descricao   -   {{ projeto.descricao }} </p>
-                    <p>Imagem      -   {{ projeto.imagem.url }}</p>
+                    <p>Imagem      -   <img src="{{ projeto.imagem.url }}" alt=""></p>
 
                     <p>Realizacao  -   {{ projeto.realizacao }}     </p>
                     <p><a href="{{ projeto.cadeira }}" >Paguina da cadeira</a></p>

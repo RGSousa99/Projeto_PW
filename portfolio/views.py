@@ -104,7 +104,6 @@ def login_view(request):
             })
     return render(request, "portfolio/login.html")
 
-
 def logout_view(request):
     logout(request)
     return render(request, 'portfolio/login.html', {
@@ -142,8 +141,6 @@ def view_apagar_projeto(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     projeto.delete()
     return HttpResponseRedirect(reverse('portfolio:projetos'))
-
-
 
 @login_required
 def nova_cadeira_page_view(request):
