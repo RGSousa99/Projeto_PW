@@ -115,9 +115,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'portfolio:login'
 
 CLOUDINARY_STORAGE = {
-  'CLOUD_NAME': "rgsousa99",
-  'API_KEY': "764835177596756",
-  'API_SECRET': "WRolP8_AJDKEUr7iAr02ybnP3iQ"
+    'CLOUD_NAME': env.str("CLOUD_NAME"),
+    'API_KEY': env.str("API_KEY"),
+    'API_SECRET': env.str("API_SECRET"),
 }
 
 MEDIA_URL = '/portfolio/'
