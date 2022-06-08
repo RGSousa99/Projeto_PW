@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # config/settings.py
 SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DEBUG", default=False)
+DEBUG = env.bool("DEBUG", default=True)
 
 ALLOWED_HOSTS = ['projeto-pw-a22002402.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',  # novo
     'django.contrib.staticfiles',
     'portfolio',
+    'cloudinary_storage',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,15 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'portfolio:login'
+
+CLOUDINARY_STORAGE = {
+  'CLOUD_NAME': "rgsousa99",
+  'API_KEY': "764835177596756",
+  'API_SECRET': "WRolP8_AJDKEUr7iAr02ybnP3iQ"
+}
+
+MEDIA_URL = '/portfolio/'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+

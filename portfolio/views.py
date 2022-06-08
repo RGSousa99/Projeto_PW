@@ -1,3 +1,4 @@
+import cloudinary.uploader
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
@@ -75,10 +76,17 @@ def desenha_grafico_resultados(request):
     for score in PontuacaoQuizz.objects.all():
         nomes.append(score.nome)
         pontuacoes.append(score.pontuacao)
-        nomes.reverse()
-        pontuacoes.reverse()
-        plt.barh(nomes, pontuacoes)
-        plt.savefig('portfolio/static/portfolio/images/resultadoGrafico.png', bbox_inches='tight')
+
+    nomes.reverse()
+    pontuacoes.reverse()
+    plt.barh(nomes, pontuacoes)
+    plt.savefig('resultados.png', bbox_inches='tight')
+    cloudinary.config(
+        cloud_name="rgsousa99",
+        api_key="764835177596756",
+        api_secret="WRolP8_AJDKEUr7iAr02ybnP3iQ"
+    )
+    cloudinary.uploader.upload('resultados.png', public_id="portfolio/resultados", invalidate=True)
 
 
 def login_view(request):
