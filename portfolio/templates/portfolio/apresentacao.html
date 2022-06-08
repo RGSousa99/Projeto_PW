@@ -2,7 +2,9 @@
 
 {% block main %}
 	<h1 class="titulo">Licenciatura de Informatica de Gestão</h1>
-
+    {% if request.user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'portfolio:novaCadeira' %}" role="button" >Nova cadeira</a>
+    {% endif %}
     <div class="contentor">
         <div class="cadeiras">
             <div class="ano1">
@@ -17,21 +19,24 @@
                                 <a href="{{ cadeira.pofessor.linkedin }}" >Pofessor : {{ cadeira.pofessor }}</a>
                             </p>
                             <p>
-                        {% if cadeira.classicicacao == 0 %}
-                            <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 1 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 2 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 3 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 4 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% else %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        {% endif %}
-
-                    </p>
+                                {% if cadeira.classicicacao == 0 %}
+                                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 1 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 2 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 3 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 4 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% else %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                {% endif %}
+                            </p>
+                            {% if request.user.is_authenticated %}
+                                <a href="{% url 'portfolio:editarCadeira' cadeira.id %}">Editar</a>
+                                <a href="{% url 'portfolio:apagarCadeira' cadeira.id %}">Apagar</a>
+                            {% endif %}
                         </div>
                     {% endif %}
                 {% endfor %}
@@ -46,21 +51,24 @@
                             <p class="#">ECTS : {{ cadeira.ects }} &nbsp;&nbsp; Realizado em: {{ cadeira.realizacao }}</p>
                             <p class="#"> <a href="{{ cadeira.pagCadeira }}" class="#">Pagina da Cadeira</a> &nbsp;&nbsp;&nbsp; Pofessor : {{ cadeira.pofessor }}</p>
                             <p>
-                        {% if cadeira.classicicacao == 0 %}
-                            <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 1 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 2 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 3 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 4 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% else %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        {% endif %}
-
-                    </p>
+                                {% if cadeira.classicicacao == 0 %}
+                                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 1 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 2 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 3 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 4 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% else %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                {% endif %}
+                            </p>
+                            {% if request.user.is_authenticated %}
+                                <a href="{% url 'portfolio:editarCadeira' cadeira.id %}">Editar</a>
+                                <a href="{% url 'portfolio:apagarCadeira' cadeira.id %}">Apagar</a>
+                            {% endif %}
                         </div>
                     {% endif %}
                 {% endfor %}
@@ -75,21 +83,25 @@
                             <p class="#">ECTS : {{ cadeira.ects }} &nbsp;&nbsp; Realizado em: {{ cadeira.realizacao }}</p>
                             <p class="#"> <a href="{{ cadeira.pagCadeira }}" class="#">Pagina da Cadeira</a> &nbsp;&nbsp;&nbsp; Pofessor : {{ cadeira.pofessor }}</p>
                             <p>
-                        {% if cadeira.classicicacao == 0 %}
-                            <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 1 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 2 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 3 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% elif cadeira.classicicacao == 4 %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-                        {% else %}
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        {% endif %}
+                                {% if cadeira.classicicacao == 0 %}
+                                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 1 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 2 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 3 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% elif cadeira.classicicacao == 4 %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                {% else %}
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                {% endif %}
 
-                    </p>
+                            </p>
+                            {% if request.user.is_authenticated %}
+                                <a href="{% url 'portfolio:editarCadeira' cadeira.id %}">Editar</a>
+                                <a href="{% url 'portfolio:apagarCadeira' cadeira.id %}">Apagar</a>
+                            {% endif %}
                         </div>
                     {% endif %}
                 {% endfor %}
