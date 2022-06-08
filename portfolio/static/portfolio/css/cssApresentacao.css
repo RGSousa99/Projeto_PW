@@ -180,6 +180,27 @@ p {
     color: white;
 }
 
+.hobbies{
+    display: flex;
+    text-align: center
+}
+
+.hobbies img {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.hobbies .hobbie{
+    padding: 30px;
+}
+
+.nova{
+    padding: 20px 100px;
+    width: 100%;
+    text-align: center;
+}
+
 @media (max-width:300px){
 	.timeline{
 		width:100%;
@@ -191,5 +212,6 @@ p {
 	}
 
 }
+
 
 
