@@ -1,5 +1,5 @@
 {% extends 'portfolio/layout.html' %}
-{% load cloudinary %}
+
 
 {% block main %}
     {% load static %}
@@ -100,9 +100,6 @@
         </div>
 
     </form>
-    <h2 class="q_titulo">Pontuações do quizz</h2>
-    <div class="resultados">
-        {% cloudinary 'portfolio/resultados' %}
-    </div>
+
 
 {% endblock %}

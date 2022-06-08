@@ -51,6 +51,7 @@ def quizz_page_view(request):
         r = PontuacaoQuizz(nome=n, pontuacao=p)
         r.save()
         desenha_grafico_resultados(request)
+        return render(request, 'portfolio/resultadosDoQuizz.html')
 
     return render(request, 'portfolio/quizz.html')
 
