@@ -1,22 +1,22 @@
 .contentor .projetos {
   background-color: rgba(44, 51, 56, 0.4);
   border-radius: 10px;
-  height:max-content;
-  width: max-content;
-  padding: 15px;
+  width: 60vw;
+  padding: 15px 15px 0 15px;
   outline: black solid;
 }
 
 .contentor .projeto {
 
-  float: left;  height: 100%;
-  margin-bottom: 10px; width: 500px;
+  float: left;
+  margin-bottom: 20px; width: 100%;
   padding: 25px;
   background-color: white;
   border-radius: 10px;                 /* arredondar cantos */
   box-shadow: 5px 5px 15px grey;
   outline: #b4b4b4 solid;
-
+  display: grid;
+  grid-template-columns: 60% 40%;
 }
 
 .heroku{
@@ -28,4 +28,26 @@
 .contentor .projeto a{
   text-decoration: none;
   color: black;
+}
+
+.imagem_p {
+  justify-content: space-between;
+}
+
+.descricao{
+}
+.imagem_p img{
+  margin-left: 50px;
+  height: 250px;
+  width:250px;
+}
+.detalhes{
+  position: relative;
+  bottom: 70px;
+  height: 70px;
+}
+
+.cloud{
+  position: relative;
+  left: 120px;
 }

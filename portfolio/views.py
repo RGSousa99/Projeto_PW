@@ -173,3 +173,7 @@ def view_apagar_cadeira(request, cadeira_id):
     cadeira = Cadeira.objects.get(id=cadeira_id)
     cadeira.delete()
     return HttpResponseRedirect(reverse('portfolio:apresentacao'))
+
+
+def resultados_page_view(request):
+    return render(request, 'portfolio/resultadosDoQuizz.html')
