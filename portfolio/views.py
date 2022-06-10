@@ -177,3 +177,7 @@ def view_apagar_cadeira(request, cadeira_id):
 
 def resultados_page_view(request):
     return render(request, 'portfolio/resultadosDoQuizz.html')
+
+
+def spa_page_view(request):
+    return render(request, 'portfolio/SPA.html')

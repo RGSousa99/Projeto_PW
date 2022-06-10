@@ -66,8 +66,22 @@ class PontuacaoQuizz(models.Model):
 class Noticia(models.Model):
     titulo = models.CharField(max_length=50)
     texto = models.CharField(max_length=500)
-    imagem = models.ImageField(blank=True)
+    imagem = models.ImageField()
     link = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.titulo
+
+class TFC(models.Model):
+    autores = models.ForeignKey(Colega, on_delete=models.CASCADE)
+    orientadores = models.ForeignKey(Professor, on_delete=models.CASCADE)
+    ano = models.CharField(max_length=5)
+    titulo = models.CharField(max_length=50)
+    resumo = models.CharField(max_length=500)
+    imagem = models.ImageField()
+    relatorio = models.CharField(max_length=200)
+    github = models.CharField(max_length=200)
+    video = models.CharField(max_length=200)
 
     def __str__(self):
         return self.titulo

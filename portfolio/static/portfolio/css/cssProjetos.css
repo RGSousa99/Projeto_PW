@@ -5,12 +5,17 @@
   padding: 15px 15px 0 15px;
   outline: black solid;
 }
+.projeto h3 {
+  height: 0;
+  position: relative;
+  top: 30px;
+}
 
 .contentor .projeto {
 
   float: left;
   margin-bottom: 20px; width: 100%;
-  padding: 25px;
+  padding: 60px 25px 25px;
   background-color: white;
   border-radius: 10px;                 /* arredondar cantos */
   box-shadow: 5px 5px 15px grey;
@@ -29,17 +34,22 @@
   text-decoration: none;
   color: black;
 }
+.titulo_p{
+  text-align: center;
+  position: relative;
+  top: 15px;
+  height: 0;
+}
 
 .imagem_p {
-  justify-content: space-between;
+    text-align: center;
+    padding-top: 15px;
 }
 
 .descricao{
 }
 .imagem_p img{
-  margin-left: 50px;
-  height: 250px;
-  width:250px;
+  width: 80%;
 }
 .detalhes{
   position: relative;
@@ -48,6 +58,14 @@
 }
 
 .cloud{
-  position: relative;
-  left: 120px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.contentor a {
+    text-decoration: none;
+    color: black;
+}
+.contentor a:hover {
+    color: #003366;
 }

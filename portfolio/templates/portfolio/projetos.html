@@ -12,31 +12,33 @@
     <div class="contentor">
         <div class="projetos">
             {% for projeto in projetos %}
-                <h3 class="titulo_pw">{{ projeto.titulo }}</h3>
+                <h3 class="titulo_p">{{ projeto.titulo }}</h3>
                 <div class="projeto">
+                    <div class="descricao" >
+                        <p>{{ projeto.descricao }}</p>
+                        <br>
+                        <p> Realizado a: {{ projeto.realizacao }}.</p>
+                        <p><a href="{{ projeto.cadeira }}" >Cadeira de: {{ projeto.cadeira.nome }}</a></p>
 
+                        Participantes: {{ projeto.participantes.nome }}
+                        <a href="{{ projeto.participantes.linkedin}}" >&nbsp;<i class="fab fa-linkedin" style="font-size:20px"></i></a> &nbsp;
+                        <a href="{{ projeto.participantes.pagAPP}}" ><img class="heroku" src="{% static 'portfolio/images/heroku.png' %}"  alt=""></a>
+                        <br>
+                        <p>Tecnologias:   {{ projeto.tecnologias }}  </p>
+                        <p>Competencias:   {{ projeto.competencias }} </p>
+                    </div>
 
-                    <div class="descricao" > {{ projeto.descricao }} </div>
                     <div class="imagem_p">
                         <img src="{{ projeto.imagem.url }}" alt="">
                     </div>
-                    <div class="detalhes">
-                        Realizado a: {{ projeto.realizacao }}<a href="{{ projeto.cadeira }}" >, na cadeira de: {{ projeto.cadeira.nome }}</a>
 
-                        Participantes: {{ projeto.participantes.nome }}
-                        <a href="{{ projeto.participantes.linkedin}}" ><i class="fab fa-linkedin" style="font-size:20px"></i></a>
-                        <a href="{{ projeto.participantes.pagAPP}}" ><img class="heroku" src="{% static 'portfolio/images/heroku.png' %}"  alt=""></a>
-
-
-
-                        <p>Tecnologias:   {{ projeto.tecnologias }}  </p>
-                        <p>Competencias:   {{ projeto.competencias }} </p>
-
+                    <div>
                         {% if request.user.is_authenticated %}
-                            <a href="{% url 'portfolio:editarProjeto' projeto.id %}">Editar</a>
+                            &nbsp; &nbsp; <a href="{% url 'portfolio:editarProjeto' projeto.id %}">Editar</a> &nbsp;&nbsp;
                             <a href="{% url 'portfolio:apagarProjeto' projeto.id %}">Apagar</a>
                         {% endif %}
                     </div>
+
                     <div class="cloud">
                         <p>
                             <a href="{{ projeto.github }}" ><i class="fab fa-github" style="font-size:40px"></i></a> &nbsp; &nbsp;
@@ -48,5 +50,13 @@
             {% endfor %}
         </div>
     </div>
+    <div class="b_titulo">
+        <h1>TFCs do DEISI</h1>
+    </div>
+    <div class="contentor">
+        <p>Aqui vais poder encontrar alguns trabalhos de finalde curso realizados nos ultimos dois anos,
+           <a href="{% url 'portfolio:spa' %}"> <b>clica aqui</b> </a>para poderes ver mais.</p>
+    </div>
+
 
 {% endblock %}
