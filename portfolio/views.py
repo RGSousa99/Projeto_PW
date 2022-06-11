@@ -180,4 +180,5 @@ def resultados_page_view(request):
 
 
 def spa_page_view(request):
-    return render(request, 'portfolio/SPA.html')
+    context = {'tfcs': TFC.objects.all()}
+    return render(request, 'portfolio/SPA.html', context)

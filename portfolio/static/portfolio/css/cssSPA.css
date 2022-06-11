@@ -17,13 +17,25 @@
     position: relative;
     right: 14vw;
     text-align: center;
-    outline: #b4b4b4 solid;
     margin-left: 50px;
     width: 70vw;
+    align-items: center;
 }
 .trabalhos img {
     width: 100%;
 }
+
+.trabalho{
+    position: relative;
+    left: 7%;
+    margin-bottom: 20px; width: 85%;
+    padding: 60px 25px 25px;
+    background-color: white;
+    border-radius: 10px;                 /* arredondar cantos */
+    box-shadow: 5px 5px 15px grey;
+    outline: #b4b4b4 solid;
+}
+
 .tempo{
     position: fixed;
     top: 70px;
@@ -34,7 +46,7 @@
 .digital{
     position: fixed;
     top: 370px;
-    right: 10px;
+    right: 30px;
     margin: 20px;
 	font-size: 50px;
 	font-family: 'Gugi', cursive;
@@ -59,6 +71,10 @@
 }
 .horas-segundos, .minutos {
     transform: translateY(-65%)
+}
+.imagem_tfc{
+    height: 200px;
+    width: 200px;
 }
 
 @media (max-width:1300px){
