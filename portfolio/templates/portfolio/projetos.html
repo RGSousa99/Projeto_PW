@@ -4,7 +4,7 @@
 {% block main %}
     {% load static %}
     <div class="b_titulo">
-	    <h1 class="titulo">Os meus projetos</h1>
+	    <h1>Os meus projetos</h1>
         {% if request.user.is_authenticated %}
             <a class="btn btn-primary" href="{% url 'portfolio:novoProjeto' %}" role="button" >Nova projeto</a>
         {% endif %}
@@ -54,7 +54,7 @@
         <h1>TFCs do DEISI</h1>
     </div>
     <div class="contentor">
-        <p>Aqui vais poder encontrar alguns trabalhos de finalde curso realizados nos ultimos dois anos,
+        <p>Aqui vais poder encontrar alguns trabalhos de final de curso realizados nos ultimos dois anos,
            <a href="{% url 'portfolio:spa' %}"> <b>clica aqui</b> </a>para poderes ver mais.</p>
     </div>
 

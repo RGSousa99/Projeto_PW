@@ -1,18 +1,33 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
+    <div class="contentor_spa">
+        <div class="trabalhos">
+            <p>TRABALHOS</p>
+            <img src="https://i0.wp.com/gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2020/06/qled-8k-samsung-scaled.jpg?resize=800%2C533&ssl=1" alt="">
+        </div>
+        <div class="tempo">
+            <h2 style="text-align: center">Weather</h2>
+            <div class="hg-weather" data-key="8904db95" data-woeid="742676">
+              <span data-weather="message">Obtendo...<br></span>
+              <span data-weather="city">Obtendo cidade</span> <span data-weather="temp">00</span>º C<br>
+              <span data-weather="description">Obtendo tempo...</span><br>
+              Nascer do Sol: <span data-weather="sunrise">00:00</span> - Pôr do Sol: <span data-weather="sunset">00:00</span><br>
+              Velocidade do vento: <span data-weather="wind_speedy">-- km/h</span><br>
+              <img src="https://assets.api.hgbrasil.com/weather/images/44.png" data-weather="image"><br>
+            </div>
+        </div>
+        <div class="digital">
+            <span class='horas-segundos'>00</span>
+            <span class='pontos'>:</span>
+            <span class='minutos'>00</span>
+            <span class='pontos'>:</span>
+            <span class='horas-segundos'>00</span>
+        </div>
 
-    <h2>Weather</h2>
 
-    <div class="hg-weather" data-key="8904db95" data-woeid="742676">
-      <span data-weather="message">Obtendo...<br></span>
 
-      <span data-weather="city">Obtendo cidade</span> <span data-weather="temp">00</span>º C<br>
-      <span data-weather="description">Obtendo tempo...</span><br>
-      Nascer do Sol: <span data-weather="sunrise">00:00</span> - Pôr do Sol: <span data-weather="sunset">00:00</span><br>
-      Velocidade do vento: <span data-weather="wind_speedy">-- km/h</span><br>
-      <img src="http://assets.api.hgbrasil.com/weather/images/44.png" data-weather="image"><br>
-    </div>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {

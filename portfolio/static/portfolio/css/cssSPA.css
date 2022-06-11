@@ -1,3 +1,77 @@
 .hg-weather span {
     color: black;
 }
+.contentor_spa{
+    background-color: rgba(253, 193, 52, 0.8);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    width: 100%;
+}
+
+
+
+.trabalhos{
+    position: relative;
+    right: 14vw;
+    text-align: center;
+    outline: #b4b4b4 solid;
+    margin-left: 50px;
+    width: 70vw;
+}
+.trabalhos img {
+    width: 100%;
+}
+.tempo{
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    margin: 20px;
+}
+
+.digital{
+    position: fixed;
+    top: 370px;
+    right: 10px;
+    margin: 20px;
+	font-size: 50px;
+	font-family: 'Gugi', cursive;
+    height: 50px;
+    width: 250px;
+}
+.horas-segundos{
+    color: #FC3307;
+    position: relative;
+    bottom:15px;
+
+}
+.minutos {
+    color: #2c3338;
+    position: relative;
+    bottom:15px;
+}
+.pontos {
+    color: #46a6dc;
+    position: relative;
+    bottom:15px;
+}
+.horas-segundos, .minutos {
+    transform: translateY(-65%)
+}
+
+@media (max-width:1300px){
+    .trabalhos{
+        width: 90vw;
+         right: 4vw;
+    }
+    .tempo{
+        position: relative;
+    }
+    .digital {
+        position: relative;
+        top: 70px;
+        left: 100px;
+    }
+}

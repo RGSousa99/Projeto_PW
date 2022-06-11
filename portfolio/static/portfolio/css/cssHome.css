@@ -151,9 +151,10 @@ main{
 }
 
 footer {
+    z-index: 3;
     flex-shrink: 0;
     height:150px;
-    background-color: rgba(44, 51, 56, 0.9);
+    background-color: rgba(44, 51, 56, 1);
 }
 footer div{
     color: #ffffff;
