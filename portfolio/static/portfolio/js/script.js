@@ -30,7 +30,11 @@ function initTime() {
 		var min = dHoje.getMinutes() < 10 ? "0" + dHoje.getMinutes() : dHoje.getMinutes();
 		var sec = dHoje.getSeconds() < 10 ? "0" + dHoje.getSeconds() : dHoje.getSeconds();
 		// Formatação da saída
-		var horas = "<span class='horas-segundos'>" + hora + "</span><span class='pontos'>:</span><span class='minutos'>" + min + "</span><span class='pontos'>:</span><span class='horas-segundos'>" + sec + "</span>";
+		var horas = "<span class='horas-segundos'>" + hora + "</span>" +
+					"<span class='pontos'>:</span>" +
+					"<span class='minutos'>" + min + "</span>" +
+					"<span class='pontos'>:</span>" +
+					"<span class='horas-segundos'>" + sec + "</span>";
 		// Coloca horas
 		$('.digital').innerHTML = horas;
 	}

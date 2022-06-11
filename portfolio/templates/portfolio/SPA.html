@@ -26,10 +26,7 @@
                     </div>
 
                     <div>
-                        {% if request.user.is_authenticated %}
-                            &nbsp; &nbsp; <a href="{% url 'portfolio:editarProjeto' tfc.id %}">Editar</a> &nbsp;&nbsp;
-                            <a href="{% url 'portfolio:apagarProjeto' tfc.id %}">Apagar</a>
-                        {% endif %}
+
                     </div>
 
                     <div class="cloud">

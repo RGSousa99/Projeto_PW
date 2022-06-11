@@ -197,6 +197,15 @@ p {
     text-align: center;
 }
 
+.contentor_skill{
+    background-color: rgba(253, 193, 52, 0.8);
+  justify-content: center;
+}
+.contentor_skill span{
+    color: black;
+}
+
+
 @media (max-width:300px){
 	.timeline{
 		width:100%;
