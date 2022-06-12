@@ -24,6 +24,10 @@ urlpatterns = [
     path('editar_cadeira/<int:cadeira_id>', views.view_editar_cadeira, name='editarCadeira'),
     path('apagar_cadeira/<int:cadeira_id>', views.view_apagar_cadeira, name='apagarCadeira'),
 
+    path('novoTFC/', views.novo_tfc_page_view, name='novoTFC'),
+    path('editar_TFC/<int:tfc_id>', views.view_editar_tfc, name='editarTFC'),
+    path('apagar_TFC/<int:tfc_id>', views.view_apagar_tfc, name='apagarTFC'),
+
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
 ]

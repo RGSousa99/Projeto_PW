@@ -11,10 +11,10 @@
             {{ form.as_table }}
         </table>
 
-    <input type="submit" value="Criar">
-            <a href="{% url 'portfolio:apresentacao' %}">Cancelar</a>
 
-            <a href="{% url 'portfolio:apagarCadeira' cadeira_id %}">Apagar</a>
-</form>
+        <a class="btn btn-success" href="{% url 'portfolio:apresentacao' %}"><input type="submit" value="Guardar"></a>
+        <a class="btn btn-warning" href="{% url 'portfolio:apresentacao' %}">Cancelar</a>
+        <a class="btn btn-danger" href="{% url 'portfolio:apagarCadeira' cadeira_id %}">Apagar</a>
+    </form>
 
 {% endblock %}

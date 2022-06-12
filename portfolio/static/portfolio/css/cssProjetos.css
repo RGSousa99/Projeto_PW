@@ -37,8 +37,9 @@
 .titulo_p{
   text-align: center;
   position: relative;
-  top: 15px;
+  top: 20px;
   height: 0;
+  z-index: 2;
 }
 
 .imagem_p {

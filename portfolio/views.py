@@ -182,3 +182,38 @@ def resultados_page_view(request):
 def spa_page_view(request):
     context = {'tfcs': TFC.objects.all()}
     return render(request, 'portfolio/SPA.html', context)
+
+
+@login_required
+def novo_tfc_page_view(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('portfolio:login'))
+
+    form_c = TfcForm(request.POST or None, request.FILES)
+
+    if form_c.is_valid():
+        form_c.save()
+        return HttpResponseRedirect(reverse('portfolio:spa'))
+
+    context = {'form': form_c}
+    return render(request, 'portfolio/novaTFC.html', context)
+
+@login_required
+def view_editar_tfc(request, tfc_id):
+    tfc = TFC.objects.get(id=tfc_id)
+    form = TfcForm(request.POST or None, instance=tfc)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:spa'))
+
+    context = {'form': form, 'tfc_id': tfc_id}
+    return render(request, 'portfolio/editaTfc.html', context)
+
+@login_required
+def view_apagar_tfc(request, tfc_id):
+    tfc = TFC.objects.get(id=tfc_id)
+    tfc.delete()
+    return HttpResponseRedirect(reverse('portfolio:spa'))
+
+

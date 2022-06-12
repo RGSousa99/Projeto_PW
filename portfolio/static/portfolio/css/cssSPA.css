@@ -11,8 +11,6 @@
     width: 100%;
 }
 
-
-
 .trabalhos{
     position: relative;
     right: 14vw;
@@ -34,6 +32,8 @@
     border-radius: 10px;                 /* arredondar cantos */
     box-shadow: 5px 5px 15px grey;
     outline: #b4b4b4 solid;
+    display: grid;
+    grid-template-columns: 60% 40%;
 }
 
 .tempo{
@@ -72,9 +72,15 @@
 .horas-segundos, .minutos {
     transform: translateY(-65%)
 }
+.trabalho a{
+    color: black;
+    text-decoration: none;
+}
 .imagem_tfc{
-    height: 200px;
-    width: 200px;
+    position: relative;
+    left: 60px;
+    text-align: center;
+    width: 60%;
 }
 
 @media (max-width:1300px){
