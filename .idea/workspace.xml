@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="978a6845-b0a5-4374-ae3c-83f0c38f3f06" name="Changes" comment="primeiro">
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/editaTfc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/novaTFC.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssProjetos.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssProjetos.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssSPA.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssSPA.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/quizz.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/quizz.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/SPA.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/SPA.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/editaCadeira.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/editaCadeira.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/editaProjeto.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/editaProjeto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/quizz.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/quizz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/resultadosDoQuizz.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/resultadosDoQuizz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados.png" beforeDir="false" afterPath="$PROJECT_DIR$/resultados.png" afterDir="false" />
     </list>
     <list id="ad2eee9c-5e0d-4cf4-b34a-9e5c01b92302" name="Changes pipfile" comment=" pipfile" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +120,8 @@
       <workItem from="1654944046282" duration="11365000" />
       <workItem from="1654982130503" duration="276000" />
       <workItem from="1654982413940" duration="1018000" />
-      <workItem from="1654984209544" duration="14646000" />
+      <workItem from="1654984209544" duration="15576000" />
+      <workItem from="1655305267288" duration="1707000" />
     </task>
     <task id="LOCAL-00001" summary="primeiro">
       <created>1653340539476</created>

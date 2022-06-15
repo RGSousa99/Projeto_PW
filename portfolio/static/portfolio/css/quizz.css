@@ -27,3 +27,9 @@
 .resultado{
     text-align: center;
 }
+
+.resultado_b{
+    text-align: center;
+    margin: 15px;
+    font-size: 50px;
+}

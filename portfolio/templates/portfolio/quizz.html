@@ -4,102 +4,107 @@
 {% block main %}
     {% load static %}
 	<h2 class="q_titulo">Quizz</h2>
-    <form method="POST" enctype="multipart/form-data" autocomplete="on">
-        {% csrf_token %}
-        <div class="quizz">
 
-            <legend>Quizz sobre Programação Web</legend>
-            <fieldset>
-                <label for="name">Nome: *</label>
-                <input type="text" id="name" name="name" placeholder=" Ricardo" required autofocus autocomplete="off">
+        <form method="POST" enctype="multipart/form-data" autocomplete="on">
+            {% csrf_token %}
+            <div class="quizz">
 
-            </fieldset>
-            <br><h2>Perguntas</h2>
-            <fieldset class="perguntas">
-                <ol>
-                    <li>
-                        <p>Que marcador se utiliza para defenir um parágrafo?</p>
+                <legend>Quizz sobre Programação Web</legend>
+                <fieldset>
+                    <label for="name">Nome: *</label>
+                    <input type="text" id="name" name="name" placeholder=" Ricardo" required autofocus autocomplete="off">
 
-                        <input type="radio" id="< p >" name="pergunta1" value="< p >">
-                        <label for="< p >">< p ></label>
-                        <input type="radio" id="< h1 >" name="pergunta1" value="< h1 >">
-                        <label for="< h1 >">< h1 ></label>
-                        <input type="radio" id="< div >" name="pergunta1" value="< div >">
-                        <label for="< div >">< div ></label>
-                        <input type="radio" id="< body >" name="pergunta1" value="< body >">
-                        <label for="< body >">< body ></label>
-                    </li>
+                </fieldset>
+                <br><h2>Perguntas</h2>
+                <fieldset class="perguntas">
+                    <ol>
+                        <li>
+                            <p>Que marcador se utiliza para defenir um parágrafo?</p>
 
-                    <li>
-                        <p>Podemos controlar a sobreposição de elementos com
-                            <label for="pergunta2">
-                            <select id="pergunta2" name="pergunta2">
-                                <option value="-----" selected>-----</option>
-                                <option value="z-index">z-index</option>
-                                <option value="back">back</option>
-                                <option value="x-index">x-index</option>
-                                <option value="top">top</option>
-                            </select>
-                            </label>
-                            .
-                        </p>
-                    </li>
+                            <input type="radio" id="< p >" name="pergunta1" value="< p >">
+                            <label for="< p >">< p ></label>
+                            <input type="radio" id="< h1 >" name="pergunta1" value="< h1 >">
+                            <label for="< h1 >">< h1 ></label>
+                            <input type="radio" id="< div >" name="pergunta1" value="< div >">
+                            <label for="< div >">< div ></label>
+                            <input type="radio" id="< body >" name="pergunta1" value="< body >">
+                            <label for="< body >">< body ></label>
+                        </li>
 
-                    <li>
-                        <p>No caso d quermos uma lista de defenições que marcador se utiliza?</p>
-
-                        <input type="radio" id="< dt >" name="pergunta3" value="< dt >">
-                        <label for="< dt >">< dt ></label>
-                        <input type="radio" id="< ol >" name="pergunta3" value="< ol >">
-                        <label for="< ol >">< ol ></label>
-                        <input type="radio" id="< dl >" name="pergunta3" value="< dl >">
-                        <label for="< dl >">< dl ></label>
-                        <input type="radio" id="< ul >" name="pergunta3" value="< ul >">
-                        <label for="< ul >">< ul ></label>
-                    </li>
-
-                    <li>
-                        <p>
-                            Para atualizar a base de dados ou implementar uma nova classe utilizamos
-                            <label for="pergunta4">
-                                <select id="pergunta4" name="pergunta4">
+                        <li>
+                            <p>Podemos controlar a sobreposição de elementos com
+                                <label for="pergunta2">
+                                <select id="pergunta2" name="pergunta2">
                                     <option value="-----" selected>-----</option>
-                                    <option value="makemigrations">makemigrations</option>
-                                    <option value="migration">migration</option>
-                                    <option value="createsuperuser">createsuperuser</option>
+                                    <option value="z-index">z-index</option>
+                                    <option value="back">back</option>
+                                    <option value="x-index">x-index</option>
+                                    <option value="top">top</option>
                                 </select>
-                            </label>
-                                e
-                            <label for="pergunta4.1">
-                                <select id="pergunta4.1" name="pergunta4.1">
-                                    <option value="-----" selected>-----</option>
-                                    <option value="relocate">relocate</option>
-                                    <option value="move">move</option>
-                                    <option value="migrate">migrate</option>
-                                </select>
-                            </label>
-                            .
-                        </p>
-                    </li>
+                                </label>
+                                .
+                            </p>
+                        </li>
 
-                    <li>
-                        <p>Qual é a extenção que se usa numa folha de estilo?</p>
+                        <li>
+                            <p>No caso d quermos uma lista de defenições que marcador se utiliza?</p>
 
-                        <input type="radio" id=".py" name="pergunta5" value=".py">
-                        <label for=".py">.py</label>
-                        <input type="radio" id=".css" name="pergunta5" value=".css">
-                        <label for=".css">.css</label>
-                        <input type="radio" id=".html" name="pergunta5" value=".html">
-                        <label for=".html">.html</label>
-                        <input type="radio" id=".txt" name="pergunta5" value=".txt">
-                        <label for=".txt">.txt</label>
-                    </li>
-                </ol>
-            </fieldset>
-            <input type="image" src="{% static 'portfolio/images/img_submit.png' %}" alt="Submit" width="150" height="48">
-        </div>
+                            <input type="radio" id="< dt >" name="pergunta3" value="< dt >">
+                            <label for="< dt >">< dt ></label>
+                            <input type="radio" id="< ol >" name="pergunta3" value="< ol >">
+                            <label for="< ol >">< ol ></label>
+                            <input type="radio" id="< dl >" name="pergunta3" value="< dl >">
+                            <label for="< dl >">< dl ></label>
+                            <input type="radio" id="< ul >" name="pergunta3" value="< ul >">
+                            <label for="< ul >">< ul ></label>
+                        </li>
 
-    </form>
+                        <li>
+                            <p>
+                                Para atualizar a base de dados ou implementar uma nova classe utilizamos
+                                <label for="pergunta4">
+                                    <select id="pergunta4" name="pergunta4">
+                                        <option value="-----" selected>-----</option>
+                                        <option value="makemigrations">makemigrations</option>
+                                        <option value="migration">migration</option>
+                                        <option value="createsuperuser">createsuperuser</option>
+                                    </select>
+                                </label>
+                                    e
+                                <label for="pergunta4.1">
+                                    <select id="pergunta4.1" name="pergunta4.1">
+                                        <option value="-----" selected>-----</option>
+                                        <option value="relocate">relocate</option>
+                                        <option value="move">move</option>
+                                        <option value="migrate">migrate</option>
+                                    </select>
+                                </label>
+                                .
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>Qual é a extenção que se usa numa folha de estilo?</p>
+
+                            <input type="radio" id=".py" name="pergunta5" value=".py">
+                            <label for=".py">.py</label>
+                            <input type="radio" id=".css" name="pergunta5" value=".css">
+                            <label for=".css">.css</label>
+                            <input type="radio" id=".html" name="pergunta5" value=".html">
+                            <label for=".html">.html</label>
+                            <input type="radio" id=".txt" name="pergunta5" value=".txt">
+                            <label for=".txt">.txt</label>
+                        </li>
+                    </ol>
+                </fieldset>
+                <input type="image" src="{% static 'portfolio/images/img_submit.png' %}" alt="Submit" width="150" height="48">
+            </div>
+        </form>
+<div class="resultado_b" >
+        <a class="btn btn-primary" href="{% url 'portfolio:resultados' %}" role="button" >Resultados</a>
+</div>
+
+
 
 
 {% endblock %}
