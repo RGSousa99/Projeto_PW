@@ -198,6 +198,30 @@ footer ul li a{
 footer a:hover{
     color: orange;
 }
+.info{
+    padding: 50px 90px;
+    background-color: #fdc134;
+}
+
+.info article{
+    border-radius: 10px;
+    margin: 10px;
+    height: 100%;
+}
+
+.titulo_h{
+    width: 30%;
+    padding: 10px 10px 10px 20px;
+    outline: #b4b4b4 solid;
+    border-radius: 10px;
+    margin: 40px;
+    background-color: rgba(44, 51, 56, 0.2);
+
+}
+.texto_h{
+    width: 60%;
+    margin: 40px;
+}
 
 @media (max-width : 760px) {
     header{

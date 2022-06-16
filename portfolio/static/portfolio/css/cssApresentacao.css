@@ -199,12 +199,16 @@ p {
 
 .contentor_skill{
     background-color: rgba(253, 193, 52, 0.8);
-  justify-content: center;
+    justify-content: center;
 }
 .contentor_skill span{
     color: black;
 }
 
+.texto_TL a {
+    color: white;
+     text-decoration: none;
+}
 
 @media (max-width:300px){
 	.timeline{

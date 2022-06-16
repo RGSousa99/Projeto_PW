@@ -9,7 +9,7 @@
             <a class="btn btn-primary" href="{% url 'portfolio:novoProjeto' %}" role="button" >Nova projeto</a>
         {% endif %}
     </div>
-    <div class="contentor">
+    <div class="contentor contentor_p">
         <div class="projetos">
             {% for projeto in projetos %}
                 <h3 class="titulo_p">{{ projeto.titulo }}</h3>
@@ -53,7 +53,7 @@
     <div class="b_titulo">
         <h1>TFCs do DEISI</h1>
     </div>
-    <div class="contentor">
+    <div class="contentor contentor_p ">
         <p>Aqui vais poder encontrar alguns trabalhos de final de curso realizados nos ultimos dois anos,
            <a href="{% url 'portfolio:spa' %}"> <b>clica aqui</b> </a>para poderes ver mais.</p>
     </div>
