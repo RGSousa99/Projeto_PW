@@ -182,16 +182,19 @@ p {
 
 .hobbies{
     display: flex;
-    text-align: center
+    text-align: center;
+    width: 100%;
 }
 
 .hobbies img {
-    height: 100px;
-    width: 100px;
+    max-height: 100px;
+    width: 100%;
     margin: 10px;
 }
 
 .hobbies .hobbie{
+    max-height: 100px;
+    width: 100%;
     padding: 30px;
 }
 

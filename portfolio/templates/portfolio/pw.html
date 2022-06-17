@@ -1,11 +1,26 @@
 {% extends 'portfolio/layout.html' %}
+{% load cloudinary %}
 
 {% block main %}
     {% load static %}
 
     <h1 class="titulo_pw">Mapa do site e tecnologias usadas</h1>
     <div class="contentor">
-    
+        <div class="mapa">
+            <img src="{% static 'portfolio/images/Diagrama.png' %}" alt="">
+        </div>
+
+        <div class="titulo_tech">
+            <h3>Tecnologias</h3>
+        </div>
+
+        <div class="tech">
+            <a href="https://html.spec.whatwg.org/"><img src="{% static 'portfolio/images/html5_w5sykm.png' %}" alt=""><br><i class="fa-solid fa-calendar"> </i>1993</a>
+            <a href="https://www.w3.org/Style/CSS/Overview.en.html"><img src="{% static 'portfolio/images/css_ftcvry.png' %}" alt=""><br><i class="fa-solid fa-calendar"> </i>1996 </a>
+            <a href="https://www.javascript.com/"> <img src="{% static 'portfolio/images/js_hltvtd.png' %}" alt=""><br><i class="fa-solid fa-calendar"> </i>1995</a>
+            <a href="https://www.python.org/"> <img src="{% static 'portfolio/images/python_kugsid.png' %}" alt=""><br><i class="fa-solid fa-calendar"> </i>1991</a>
+            <a href="https://www.djangoproject.com/"> <img src="{% static 'portfolio/images/django_xbbmre.png' %}" alt=""><br><i class="fa-solid fa-calendar"> </i>2005</a>
+        </div>
     </div>
 
     <h1 class="titulo_pw">Laboratórios</h1>
@@ -19,9 +34,10 @@
     <div class="contentor">
         {% for noticia in noticias %}
              <div class="noticia">
-                <a href="{{ noticia.link }}"  style="text-decoration: none; color: black"><h4 class="p_titulo" ><b>{{ noticia.titulo }}</b></h4></a>
-                <p class="p_texto">{{ noticia.texto }}</p>
-                <img src="{% static 'portfolio/images/noticia1.jpeg' %}">
+                 <a href="{{ noticia.link }}"  style="text-decoration: none; color: black"><h4 class="p_titulo" ><b>{{ noticia.titulo }}</b></h4></a>
+                 <div></div>
+                 <p class="p_texto"><br>{{ noticia.texto }}</p>
+                 <img src="{{ noticia.imagem.url }}" alt="">
              </div>
         {% endfor %}
     </div>

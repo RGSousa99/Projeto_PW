@@ -123,7 +123,7 @@ p {
 	background-color: #2c3338;
 	color:#fff;
 	padding:30px 20px;
-	box-shadow:0px 0px 10px rgba(0,0,0,.5);
+	box-shadow:0 0 10px rgba(0,0,0,.5);
 }
 .timeline ul{
 	list-style-type:none;
@@ -150,7 +150,7 @@ p {
 	padding-top:5px;
 }
 .timeline ul li .content p{
-	padding:5px 0px 15px 0px;
+	padding:5px 0 15px 0;
 	font-size:15px;
 }
 .timeline ul li:before{
@@ -169,7 +169,7 @@ p {
 }
 .timeline ul li:hover:before{
 	background-color:red;
-	box-shadow:0px 0px 10px 2px red;
+	box-shadow:0 0 10px 2px red;
 }
 
 .data{
@@ -200,6 +200,7 @@ p {
 .contentor_skill{
     background-color: rgba(253, 193, 52, 0.8);
     justify-content: center;
+    padding: 25px;
 }
 .contentor_skill span{
     color: black;
@@ -208,6 +209,34 @@ p {
 .texto_TL a {
     color: white;
      text-decoration: none;
+}
+.mapa{
+    text-align: center;
+    width: 100%;
+}
+
+.mapa img{
+    width: 80%;
+}
+.titulo_tech{
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.content a{
+    color: white;
+    text-decoration: none;
+}
+
+.anos_L i{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+@media (max-width : 760px) {
+    .contentor {
+        padding: 20px 15px;
+    }
 }
 
 @media (max-width:300px){

@@ -181,7 +181,7 @@ footer ul li a{
 
 .f_social{
     position: relative;
-    top: -100px;
+    top: -200px;
     left: 80%;
     width: fit-content;
 }
@@ -232,7 +232,7 @@ footer a:hover{
         margin-left: 30px;
     }
     footer{
-        height: 220px;
+        height: 420px;
     }
     .f_social{
         position: relative;

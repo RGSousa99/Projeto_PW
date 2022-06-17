@@ -44,9 +44,9 @@
 }
 
 .digital{
-    position: fixed;
-    top: 370px;
-    right: 30px;
+    position: relative;
+    bottom: 130px;
+    left: 50vw;
     margin: 20px;
 	font-size: 50px;
 	font-family: 'Gugi', cursive;
@@ -60,7 +60,7 @@
 
 }
 .minutos {
-    color: #2c3338;
+    color: #ffffff;
     position: relative;
     bottom:15px;
 }
