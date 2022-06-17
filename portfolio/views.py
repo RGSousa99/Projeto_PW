@@ -143,6 +143,20 @@ def view_apagar_projeto(request, projeto_id):
     return HttpResponseRedirect(reverse('portfolio:projetos'))
 
 @login_required
+def nova_pessoa_page_view(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('portfolio:login'))
+
+    form_c = PessoaForm(request.POST or None)
+
+    if form_c.is_valid():
+        form_c.save()
+        return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+    context = {'form': form_c}
+    return render(request, 'portfolio/novaPessoa.html', context)
+
+@login_required
 def nova_cadeira_page_view(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse('portfolio:login'))

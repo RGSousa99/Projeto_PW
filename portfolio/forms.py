@@ -93,9 +93,36 @@ class TfcForm(ModelForm):
         # inserção de classes CSS para formatação de cada campo do formulário
         widgets = {
 
-            'titulo': forms.TextInput(attrs={'placeholder': 'Projeto de programação'}),
+            'titulo': forms.TextInput(attrs={'placeholder': 'Titulo do TFC'}),
             'resumo': forms.Textarea(attrs={'size': '150', 'width': '100%', 'rows': '5', 'wrap': 'soft',
                                                'maxlenght': '150', 'style': 'width: 95%'}),
+
+        }
+
+        # texto a exibir junto à janela de inserção
+        labels = {
+
+            'titulo': 'Título',
+            'resumo': 'Descrição',
+
+        }
+
+    # texto auxiliar a um determinado campo do formulário
+    help_texts = {
+
+        'titulo': 'indique qual o projeto em que trabalhou comigo',
+        'resumo': 'indique até 155 caracteres como foi a experiência'
+    }
+
+class PessoaForm(ModelForm):
+    class Meta:
+        model = Colega
+        fields = '__all__'
+        # inserção de classes CSS para formatação de cada campo do formulário
+        widgets = {
+            'nome': forms.TextInput(attrs={'placeholder': 'Nome do colega'}),
+            'linkedin': forms.TextInput(attrs={'placeholder': 'Linkdin do colega'}),
+            'pagAPP': forms.Textarea(attrs={'size': '150', 'width': '50%', 'placeholder': 'Pagina do colega'}),
 
         }
 
