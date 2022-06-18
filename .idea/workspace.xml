@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="978a6845-b0a5-4374-ae3c-83f0c38f3f06" name="Changes" comment="primeiro">
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/novaPessoa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/0_1V1IqXmsODAvF4vo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/0_4voBbLjEWj211JGd.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/0_ZQ9Xa7CINFVMA95w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/0_bvxjOHc4q8WOpQid.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/0_ztja6yNToIZgr7Xx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/1_0dul7hn9LeV7U2XLVPvYYw.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/1_6YJwDRYpO8WSsmrEgyZEJQ.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/1_amAIdte4Gu29WVM13fwGVA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/1_eSucGkZOh9ViwO1fQCKCvA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/1_gTKpW04SfIdZp-I_rmGzag.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/data_science_y2um0k.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/drones_bh28p5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/eventos_aplication_pgya6t.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/projetoLP2_n5kdpp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/apresentacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/apresentacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssApresentacao.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/cssApresentacao.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/projetos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/resultadosDoQuizz.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/resultadosDoQuizz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados.png" beforeDir="false" afterPath="$PROJECT_DIR$/resultados.png" afterDir="false" />
     </list>
     <list id="ad2eee9c-5e0d-4cf4-b34a-9e5c01b92302" name="Changes pipfile" comment=" pipfile" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +136,7 @@
       <workItem from="1655305267288" duration="4333000" />
       <workItem from="1655413934990" duration="5122000" />
       <workItem from="1655460418824" duration="15189000" />
-      <workItem from="1655500706155" duration="1634000" />
+      <workItem from="1655500706155" duration="5523000" />
     </task>
     <task id="LOCAL-00001" summary="primeiro">
       <created>1653340539476</created>
